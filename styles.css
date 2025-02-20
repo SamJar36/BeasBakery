@@ -5,31 +5,11 @@
     width: 20%;
     height: 20%;
 }
-.image-container {
-    display: flex;
-    justify-content: center;
-}
-.image-container {
-    margin: 5px;
-}
-#fika-image {
-    width: 10%;
-    height: 10%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.text-overlay {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
+.container {
+    background-color: #a1d693;
+    padding: 14x 20px;
+    text-decoration: none;
+    text-align: center; 
 }
 .topnav {
     display: flex;
@@ -48,7 +28,4 @@
 .topnav a:active {
     background-color: #04aa6d;
     color: white;
-}
-#fika1 {
-    width: 100%;
 }
