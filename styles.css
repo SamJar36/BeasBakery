@@ -25,3 +25,6 @@
     background-color: #04aa6d;
     color: white;
 }
+.lightbox-gallery .item {
+    padding-bottom:30px
+}
