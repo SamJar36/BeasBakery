@@ -2,19 +2,15 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
-    height: 20%;
+    width: 200px;
 }
-.container {
+#greenbar {
     background-color: #a1d693;
-    padding: 14x 20px;
-    text-decoration: none;
-    text-align: center; 
 }
 .topnav {
     display: flex;
     justify-content: center;
-    background-color: #a1d693;
+    
 }
 .topnav a {
     padding: 14px 20px;
