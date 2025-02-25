@@ -36,3 +36,7 @@
 .modal-picture {
     width: 465px;
 }
+.map-container {
+    height: 500px;
+    width: 500px;
+}
