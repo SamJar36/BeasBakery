@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="image-container justify-content">
-        <img id="logo" src="images/beaslogo2.png" class="img-fluid centered-image">
+        <img id="logo" src="images/beaslogo2.webp" class="img-fluid centered-image" alt="logo">
     </div>
     <div class="container-fluid" id="greenbar">
         <div class="row">
@@ -17,11 +17,11 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="topnav">
-                    <a href="index.html">Home</a>
-                    <a class="active" href="products.html">Products</a>
-                    <a href="#about">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">Shopping Cart</a>
+                    <a href="index.html" aria-label="Home">Home</a>
+                    <a class="active" aria-label="Products" href="products.html">Products</a>
+                    <a href="#about" aria-label="About">About</a>
+                    <a href="contact.html" aria-label="Contact">Contact</a>
+                    <a href="#" aria-label="Shopping Cart" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">Shopping Cart</a>
                   </div> 
             </div>
             <div class="col-xs-0 col-md-4">
@@ -35,10 +35,10 @@
                 <p class="text-center">Click the images below for more information and to purchase</p>
             </div>
             <div class="row photos">
-                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-lightbox="photos"><img class="img-fluid" src="images/coffee.png"></a></div>
-                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#chocolateballModal" data-lightbox="photos"><img class="img-fluid" src="images/chokladboll.png"></a></div>
-                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#cinnamonrollModal" data-lightbox="photos"><img class="img-fluid" src="images/kanelbulle.png"></a></div>
-                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#dammsugareModal" data-lightbox="photos"><img class="img-fluid" src="images/dammsugare.png"></a></div>   
+                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-lightbox="photos"><img class="img-fluid" src="images/coffee.webp" alt="heavenly hazelnut latte picture"></a></div>
+                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#chocolateballModal" data-lightbox="photos"><img class="img-fluid" src="images/chokladboll.webp" alt="swedish chocolate ball picture"></a></div>
+                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#cinnamonrollModal" data-lightbox="photos"><img class="img-fluid" src="images/kanelbulle.webp" alt="cinnamon roll picture"></a></div>
+                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#dammsugareModal" data-lightbox="photos"><img class="img-fluid" src="images/dammsugare.webp" alt="marzipan vacuum cleaner picture"></a></div>   
             </div>
         </div>
     </div>
@@ -50,12 +50,12 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="images/coffee.png" class="modal-picture">
+                <img src="images/coffee.webp" class="modal-picture" alt="heavenly hazelnut latte picture">
               <p>Indulge in the rich, nutty flavors of our Heavenly Hazelnut Latte. This delightful beverage combines the smooth, creamy texture of steamed milk with a perfectly balanced shot of our signature espresso. Infused with the essence of roasted hazelnuts, each sip offers a harmonious blend of sweetness and warmth. Topped with a delicate swirl of velvety foam and a sprinkle of crushed hazelnuts, this latte is a true treat for the senses. Perfect for a cozy morning or an afternoon pick-me-up, our Heavenly Hazelnut Latte is sure to become your new favorite indulgence.<br><br>35 Kronor</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="AddToCart('Heavenly Hazelnut Latte', 35)">Add to cart</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+              <button type="button" class="btn btn-primary" aria-label="Add to cart" onclick="AddToCart('Heavenly Hazelnut Latte', 35)">Add to cart</button>
             </div>
           </div>
         </div>
@@ -68,12 +68,12 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="images/chokladboll.png" class="modal-picture">
+                <img src="images/chokladboll.webp" class="modal-picture" alt="swedish chocolate ball picture">
               <p>Indulge in the delightful simplicity of our Classic Swedish Chokladboll. This beloved treat is a perfect blend of rich cocoa, rolled oats, and a hint of vanilla, all brought together with creamy butter and sweetened with just the right amount of sugar. Each chokladboll is lovingly hand-rolled and generously coated in crunchy pärlsocker (pearl sugar), adding a satisfying texture to every bite. Perfect with a cup of freshly brewed coffee or as a sweet pick-me-up any time of the day, our chokladboll is a true taste of Swedish tradition. Enjoy the comforting flavors and nostalgic charm of this classic confection.<br><br>35 Kronor</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="AddToCart('Swedish Chocolate Ball', 35)" >Add to cart</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+              <button type="button" class="btn btn-primary" aria-label="Add to cart" onclick="AddToCart('Swedish Chocolate Ball', 35)" >Add to cart</button>
             </div>
           </div>
         </div>
@@ -86,12 +86,12 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="images/kanelbulle.png" class="modal-picture">
+                <img src="images/kanelbulle.webp" class="modal-picture" alt="cinnamon roll picture">
               <p>Indulge in the ultimate comfort food with our delicious Cinnamon Roll. Each roll is handcrafted with love, featuring layers of soft, pillowy dough swirled with a generous blend of premium cinnamon and brown sugar. Baked to golden perfection, these rolls are then drizzled with a luscious cream cheese frosting that melts into every crevice, creating a delightful harmony of flavors..<br><br>35 Kronor</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="AddToCart('Cinnamon Roll', 35)">Add to cart</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+              <button type="button" class="btn btn-primary" aria-label="Add to cart" onclick="AddToCart('Cinnamon Roll', 35)">Add to cart</button>
             </div>
           </div>
         </div>
@@ -104,12 +104,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <img src="images/dammsugare.png" class="modal-picture">
+              <img src="images/dammsugare.webp" class="modal-picture" alt="marzipan vacuum cleaner picture"> 
             <p>This delightful confection is a miniature masterpiece, crafted with the finest marzipan to resemble a tiny vacuum cleaner. The marzipan vacuum cleaner is about the size of a small cookie, with a smooth, glossy finish. It's painted in pastel colors, with intricate details like tiny buttons and a handle, making it almost too cute to eat!<br><br>35 Kronor</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" onclick="AddToCart('Marzipan Vacuum Cleaner', 35)">Add to cart</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            <button type="button" class="btn btn-primary" aria-label="Add to cart" onclick="AddToCart('Marzipan Vacuum Cleaner', 35)">Add to cart</button>
           </div>
         </div>
       </div>
