@@ -1,5 +1,6 @@
 function AddToCart(productName, productPrice)
 {
+    ChangeButtonTextOnClick();
     const cart = document.getElementById('cart');
     const li = document.createElement('li');
     li.className = 'list-group-item d-flex justify-content-between align-items-center';
@@ -17,6 +18,13 @@ function AddToCart(productName, productPrice)
 function RemoveFromCart(element) {
     element.parentElement.parentElement.remove();
     SaveCartToLocalStorage();
+}
+function ChangeButtonTextOnClick() {
+    var button = document.getElementById("cartButton");
+    button.innerHTML = "Added";
+    setTimeout(function() {
+        button.innerHTML = "Add to cart";
+    }, 1000);
 }
 
 function SaveCartToLocalStorage() {
