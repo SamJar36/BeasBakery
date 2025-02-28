@@ -1,7 +1,7 @@
 let totalPrice = 0;
 
-function AddToCart(productName, productPrice) {
-    ChangeButtonTextOnClick();
+function AddToCart(productName, productPrice, button) {
+    ChangeButtonTextOnClick(button);
     const cart = document.getElementById('cart');
     const li = document.createElement('li');
     li.className = 'list-group-item d-flex justify-content-between align-items-center';
@@ -9,7 +9,7 @@ function AddToCart(productName, productPrice) {
         <span>${productName}</span>
         <div class="d-flex align-items-center">
             <span class="badge bg-primary me-2">${productPrice} kr</span>
-            <span class="text-danger" style="cursor: pointer;" onclick="RemoveFromCart(this, ${productPrice})">&#10005;</span>
+            <span class="text-danger remove-button" style="cursor: pointer;">&#10005;</span>
         </div>
     `;
     cart.appendChild(li);
@@ -18,6 +18,7 @@ function AddToCart(productName, productPrice) {
     document.getElementById('totalPrice').textContent = `Total Price: ${totalPrice} kr`;
 
     SaveCartToLocalStorage();
+    AttachRemoveEvent(li.querySelector('.remove-button'), productPrice);
 }
 
 function RemoveFromCart(element, productPrice) {
@@ -27,12 +28,18 @@ function RemoveFromCart(element, productPrice) {
     SaveCartToLocalStorage();
 }
 
-function ChangeButtonTextOnClick() {
-    var button = document.getElementById("cartButton");
+function ChangeButtonTextOnClick(button) {
     button.innerHTML = "Added";
     setTimeout(function() {
         button.innerHTML = "Add to cart";
     }, 1000);
+}
+
+var buttons = document.getElementsByClassName("cartButton");
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+        AddToCart('Ham Sandwich', 35, this);
+    });
 }
 
 function SaveCartToLocalStorage() {
@@ -67,14 +74,21 @@ function LoadCartFromLocalStorage() {
                 <span>${item.productName}</span>
                 <div class="d-flex align-items-center">
                     <span class="badge bg-primary me-2">${item.productPrice}</span>
-                    <span class="text-danger" style="cursor: pointer;" onclick="RemoveFromCart(this, ${item.productPrice})">&#10005;</span>
+                    <span class="text-danger remove-button" style="cursor: pointer;">&#10005;</span>
                 </div>
             `;
             cart.appendChild(li);
             totalPrice += parseFloat(item.productPrice);
+            AttachRemoveEvent(li.querySelector('.remove-button'), item.productPrice);
         }
         document.getElementById('totalPrice').textContent = `Total Price: ${totalPrice} kr`;
     }
+}
+
+function AttachRemoveEvent(button, productPrice) {
+    button.addEventListener('click', function() {
+        RemoveFromCart(button, productPrice);
+    });
 }
 
 window.onload = function() {
