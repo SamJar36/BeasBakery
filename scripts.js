@@ -1,7 +1,6 @@
 let totalPrice = 0;
 
-function AddToCart(productName, productPrice, button) {
-    ChangeButtonTextOnClick(button);
+function AddToCart(productName, productPrice) {
     const cart = document.getElementById('cart');
     const li = document.createElement('li');
     li.className = 'list-group-item d-flex justify-content-between align-items-center';
@@ -28,19 +27,7 @@ function RemoveFromCart(element, productPrice) {
     SaveCartToLocalStorage();
 }
 
-function ChangeButtonTextOnClick(button) {
-    button.innerHTML = "Added";
-    setTimeout(function() {
-        button.innerHTML = "Add to cart";
-    }, 1000);
-}
 
-var buttons = document.getElementsByClassName("cartButton");
-for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", function() {
-        AddToCart('Ham Sandwich', 35, this);
-    });
-}
 
 function SaveCartToLocalStorage() {
     const cartItems = [];
