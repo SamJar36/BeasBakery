@@ -1,5 +1,6 @@
-function AddToCart(productName, productPrice)
-{
+let totalPrice = 0;
+
+function AddToCart(productName, productPrice) {
     ChangeButtonTextOnClick();
     const cart = document.getElementById('cart');
     const li = document.createElement('li');
@@ -8,17 +9,24 @@ function AddToCart(productName, productPrice)
         <span>${productName}</span>
         <div class="d-flex align-items-center">
             <span class="badge bg-primary me-2">${productPrice} kr</span>
-            <span class="text-danger" style="cursor: pointer;" onclick="RemoveFromCart(this)">&#10005;</span>
+            <span class="text-danger" style="cursor: pointer;" onclick="RemoveFromCart(this, ${productPrice})">&#10005;</span>
         </div>
     `;
     cart.appendChild(li);
 
+    totalPrice += parseFloat(productPrice);
+    document.getElementById('totalPrice').textContent = `Total Price: ${totalPrice} kr`;
+
     SaveCartToLocalStorage();
 }
-function RemoveFromCart(element) {
+
+function RemoveFromCart(element, productPrice) {
     element.parentElement.parentElement.remove();
+    totalPrice -= parseFloat(productPrice);
+    document.getElementById('totalPrice').textContent = `Total Price: ${totalPrice} kr`;
     SaveCartToLocalStorage();
 }
+
 function ChangeButtonTextOnClick() {
     var button = document.getElementById("cartButton");
     button.innerHTML = "Added";
@@ -42,6 +50,7 @@ function SaveCartToLocalStorage() {
     // Store the cart data in localStorage as a JSON string
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
+
 function LoadCartFromLocalStorage() {
     const cart = document.getElementById('cart');
     const savedCartItems = localStorage.getItem('cartItems');
@@ -58,13 +67,16 @@ function LoadCartFromLocalStorage() {
                 <span>${item.productName}</span>
                 <div class="d-flex align-items-center">
                     <span class="badge bg-primary me-2">${item.productPrice}</span>
-                    <span class="text-danger" style="cursor: pointer;" onclick="RemoveFromCart(this)">&#10005;</span>
+                    <span class="text-danger" style="cursor: pointer;" onclick="RemoveFromCart(this, ${item.productPrice})">&#10005;</span>
                 </div>
             `;
             cart.appendChild(li);
+            totalPrice += parseFloat(item.productPrice);
         }
+        document.getElementById('totalPrice').textContent = `Total Price: ${totalPrice} kr`;
     }
 }
+
 window.onload = function() {
     LoadCartFromLocalStorage();
 };
