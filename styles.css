@@ -48,6 +48,15 @@
     background-color: #04aa6d;
     color: white;
 }
+.text-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.image-and-text {
+    margin-top: 50px;
+}
 .lightbox-gallery {
     background-color: #04aa6d !important;
 }
