@@ -32,8 +32,8 @@
     <div class="lightbox-gallery">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">Available fika products</h2>
-                <p class="text-center">Click the images below for more information and to purchase</p>
+                <h2 class="text-center">Available products<br></h2>
+                <p class="text-center">Feel free to browse our delicious wares<br>Click on images to purchase</p>
             </div>
             <div class="row photos">
                 <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-lightbox="photos"><img class="img-fluid" src="images/coffee.webp" alt="heavenly hazelnut latte picture"></a></div>
@@ -47,6 +47,7 @@
                 <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#princesscakeModal" data-lightbox="photos"><img class="img-fluid" src="images/princesscake.webp" alt="princess cake picture"></a></div>   
                 <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#raspberrycookieModal" data-lightbox="photos"><img class="img-fluid" src="images/raspberrycookie.webp" alt="raspberry cookie picture"></a></div>   
                 <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#saladModal" data-lightbox="photos"><img class="img-fluid" src="images/salad.webp" alt="salad picture"></a></div>   
+                <div class="col-sm-12 col-md-6 col-lg-4 item"><a href="#" data-bs-toggle="modal" data-bs-target="#gingerbreadModal" data-lightbox="photos"><img class="img-fluid" src="images/gingerbread.webp" alt="gingerbread cookie picture"></a></div>   
            
               </div>
         </div>
@@ -267,6 +268,26 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
             <button type="button" class="cartButton btn btn-primary" aria-label="Add to cart" onclick="AddToCart('Salad', 83)">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="gingerbreadModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Salad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <img src="images/gingerbread.webp" class="modal-picture" alt="gingerbread cookie picture"> 
+            <p>Indulge in the warm, spiced flavors of our cafe's gingerbread cookie, a true holiday delight. This charming treat features a perfectly baked, golden-brown cookie, infused with the rich, aromatic spices of ginger, cinnamon, and cloves.
+
+              Each bite offers a delightful balance of sweetness and spice, with a soft, chewy texture that melts in your mouth. The cookie is beautifully decorated with a delicate icing pattern, adding a touch of festive cheer to its rustic charm.<br><br><strong>12 Kronor</strong></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            <button type="button" class="cartButton btn btn-primary" aria-label="Add to cart" onclick="AddToCart('Gingerbread Cookie', 12)">Add to cart</button>
           </div>
         </div>
       </div>
