@@ -34,17 +34,31 @@
 #greenbar {
     background-color: #a1d693;
 }
-.text-overlay {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white; 
-    font-family: 'Arial', sans-serif; 
+.background-row {
+    background-image: url('images/fika1.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
     text-align: center;
-    font-size: 25px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
-    width: 100%;
+    padding-top: 50px; 
+}
+#opening-hours-text {
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+#opening-hours-header {
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 .topnav {
     display: flex;
